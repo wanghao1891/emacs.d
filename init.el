@@ -25,3 +25,6 @@ re-downloaded in order to locate PACKAGE."
 	          (require-package package min-version t)))))
 
 (require-package 'auto-complete)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
+(ac-config-default)
