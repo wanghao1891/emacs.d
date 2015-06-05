@@ -8,3 +8,6 @@
 ;;----------------------------------------------------------------------------
 (require 'init-elpa)
 (require 'init-auto-complete)
+(require 'init-paredit)
+(require 'init-scheme)
+(require 'init-editing-utils)
