@@ -1,30 +1,10 @@
-(require 'package) ;; You might already have this line
+;;; This file bootstraps the configuration, which is divided into
+;;; a number of other files.
 
-;; We include the org repository for completeness, but don't normally
-;; use it.
-(add-to-list 'package-archives '("org" . "http://orgmode.org/elpa/"))
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 
-;;; Also use Melpa for most packages
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-(add-to-list 'package-archives '("melpa-stable" . "http://stable.melpa.org/packages/"))
-
-(package-initialize) ;; You might already have this line
-
-;;; On-demand installation of packages
-
-(defun require-package (package &optional min-version no-refresh)
-    "Install given PACKAGE, optionally requiring MIN-VERSION.
-If NO-REFRESH is non-nil, the available package lists will not be
-re-downloaded in order to locate PACKAGE."
-    (if (package-installed-p package min-version)
-	t
-      (if (or (assoc package package-archive-contents) no-refresh)
-	  (package-install package)
-	(progn
-	  (package-refresh-contents)
-	          (require-package package min-version t)))))
-
-(require-package 'auto-complete)
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
+;;----------------------------------------------------------------------------
+;; Bootstrap config
+;;----------------------------------------------------------------------------
+(require 'init-elpa)
+(require 'init-auto-complete)
