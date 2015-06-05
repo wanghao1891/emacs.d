@@ -37,3 +37,5 @@ site-lisp/package/
 /.sx/
 /org-clock-save.el
 /ditaa*.jar
+recentf
+ido.last
