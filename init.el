@@ -41,7 +41,7 @@
 
 ;(require 'init-frame-hooks)
 ;(require 'init-xterm)
-(require 'init-themes)
+;(require 'init-themes)
                                         ;(require 'init-osx-keys)
                                         ;(require 'init-gui-frames)
                                         ;(require 'init-proxies)
@@ -123,9 +123,9 @@
 ;;----------------------------------------------------------------------------
 ;; Variables configured via the interactive 'customize' interface
 ;;----------------------------------------------------------------------------
-(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
-(when (file-exists-p custom-file)
-  (load custom-file))
+;(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
+;(when (file-exists-p custom-file)
+;  (load custom-file))
 
 
 ;;----------------------------------------------------------------------------
