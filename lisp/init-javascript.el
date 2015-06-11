@@ -74,6 +74,16 @@
 
 (setq inferior-js-program-command "node")
 
+(setq inferior-js-mode-hook
+      (lambda ()
+        ;; We like nice colors
+        ;(ansi-color-for-comint-mode-on)
+        ;; Deal with some prompt nonsense
+        (add-to-list 'comint-preoutput-filter-functions
+                     (lambda (output)
+                       (replace-regexp-in-string ".*1G\.\.\..*5G" "..."
+                                                 (replace-regexp-in-string ".*1G.*3G" ">" output))))))
+
 (defvar inferior-js-minor-mode-map (make-sparse-keymap))
 (define-key inferior-js-minor-mode-map "\C-x\C-e" 'js-send-last-sexp)
 (define-key inferior-js-minor-mode-map "\C-\M-x" 'js-send-last-sexp-and-go)
