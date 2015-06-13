@@ -146,6 +146,12 @@
             (message "init completed in %.2fms"
                      (sanityinc/time-subtract-millis after-init-time before-init-time))))
 
+;;----------------------------------------------------------------------------
+;; Add by wh
+;; Set scroll-conservatively to a large number (larger than 100),automatic
+;; scrolling never centers point, no matter how far point moves
+;;----------------------------------------------------------------------------
+(setq scroll-conservatively 10000)
 
 (provide 'init)
 
