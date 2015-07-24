@@ -107,5 +107,9 @@
     (add-hook 'skewer-mode-hook
               (lambda () (inferior-js-keys-mode -1)))))
 
+;; ---------------------------------------------------------------------------
+;; Add hs-minor-mode add by wh [2015-07-24 Fri 17:09]
+;; ---------------------------------------------------------------------------
+(add-hook 'js2-mode-hook 'hs-minor-mode)
 
 (provide 'init-javascript)
