@@ -111,5 +111,6 @@
 ;; Add hs-minor-mode add by wh [2015-07-24 Fri 17:09]
 ;; ---------------------------------------------------------------------------
 (add-hook 'js2-mode-hook 'hs-minor-mode)
+;(add-hook 'js2-mode-hook (lambda () (hs-minor-mode 1)))
 
 (provide 'init-javascript)
