@@ -50,6 +50,11 @@
 	  (lambda ()
 	    (paredit-mode 1)
 	    (define-key scheme-mode-map (kbd "<f5>") 'scheme-send-last-sexp-split-window)
-	        (define-key scheme-mode-map (kbd "<f6>") 'scheme-send-definition-split-window)))
+            (define-key scheme-mode-map (kbd "<f6>") 'scheme-send-definition-split-window)))
+
+;; ---------------------------------------------------------------------------
+;; Add hs-minor-mode add by wh [2015-10-22 Thu 11:50]
+;; ---------------------------------------------------------------------------
+(add-hook 'scheme-mode-hook 'hs-minor-mode)
 
 (provide 'init-scheme)
