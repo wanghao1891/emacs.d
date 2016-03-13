@@ -46,6 +46,11 @@
               (append flycheck-disabled-checkers
                           '(json-jsonlist)))
 
+;; ---------------------------------------------------------------------------
+;; Add hs-minor-mode add by wh [2016-03-13 Sun 15:09]
+;; ---------------------------------------------------------------------------
+(add-hook 'web-mode-hook 'hs-minor-mode)
+
 (provide 'init-jsx)
 
 ;;; init-jsx.el ends here
