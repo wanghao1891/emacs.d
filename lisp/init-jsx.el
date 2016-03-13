@@ -13,11 +13,22 @@
   )
 (add-hook 'web-mode-hook  'my-web-mode-hook)
 
+;; for better jsx syntax-highlighting in web-mode
+;; - courtesy of Patrick @halbtuerke
+;; nothing change, so comment
+;;(defadvice web-mode-highlight-part (around tweak-jsx activate)
+;;  (if (equal web-mode-content-type "jsx")
+;;      (let ((web-mode-enable-part-face nil))
+;;        ad-do-it)
+;;    ad-do-it))
+
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
 
 ;; turn on flychecking globally
-(add-hook 'after-init-hook #'global-flycheck-mode)
+;;(add-hook 'after-init-hook #'global-flycheck-mode)
+(add-hook 'web-mode-hook 'flycheck-mode)
+
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
