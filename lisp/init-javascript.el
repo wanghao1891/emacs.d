@@ -29,15 +29,15 @@
               js2-bounce-indent-p nil)
 (after-load 'js2-mode
   ;; Disable js2 mode's syntax error highlighting by default...
-  (setq-default js2-mode-show-parse-errors nil
-                js2-mode-show-strict-warnings nil)
+;;  (setq-default js2-mode-show-parse-errors nil
+;;                js2-mode-show-strict-warnings nil)
   ;; ... but enable it if flycheck can't handle javascript
-  (autoload 'flycheck-get-checker-for-buffer "flycheck")
-  (defun sanityinc/disable-js2-checks-if-flycheck-active ()
-    (unless (flycheck-get-checker-for-buffer)
-      (set (make-local-variable 'js2-mode-show-parse-errors) t)
-      (set (make-local-variable 'js2-mode-show-strict-warnings) t)))
-  (add-hook 'js2-mode-hook 'sanityinc/disable-js2-checks-if-flycheck-active)
+;;  (autoload 'flycheck-get-checker-for-buffer "flycheck")
+;;  (defun sanityinc/disable-js2-checks-if-flycheck-active ()
+;;    (unless (flycheck-get-checker-for-buffer)
+;;      (set (make-local-variable 'js2-mode-show-parse-errors) t)
+;;      (set (make-local-variable 'js2-mode-show-strict-warnings) t)))
+;;  (add-hook 'js2-mode-hook 'sanityinc/disable-js2-checks-if-flycheck-active)
 
   (add-hook 'js2-mode-hook (lambda () (setq mode-name "JS2")))
 
