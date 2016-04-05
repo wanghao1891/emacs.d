@@ -113,4 +113,9 @@
 (add-hook 'js2-mode-hook 'hs-minor-mode)
 ;(add-hook 'js2-mode-hook (lambda () (hs-minor-mode 1)))
 
+;; ---------------------------------------------------------------------------
+;; Add js2-jsx-mode add by wh [2016-04-05 Tue 16:36]
+;; ---------------------------------------------------------------------------
+(add-to-list 'auto-mode-alist '("\\.jsx?$" . js2-jsx-mode))
+
 (provide 'init-javascript)
