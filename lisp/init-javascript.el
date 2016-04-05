@@ -116,6 +116,6 @@
 ;; ---------------------------------------------------------------------------
 ;; Add js2-jsx-mode add by wh [2016-04-05 Tue 16:36]
 ;; ---------------------------------------------------------------------------
-(add-to-list 'auto-mode-alist '("\\.jsx?$" . js2-jsx-mode))
+;;(add-to-list 'auto-mode-alist '("\\.jsx?$" . js2-jsx-mode))
 
 (provide 'init-javascript)
