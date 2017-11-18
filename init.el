@@ -128,6 +128,7 @@
   (load custom-file))
 
 
+
 ;;----------------------------------------------------------------------------
 ;; Allow users to provide an optional "init-local" containing personal settings
 ;;----------------------------------------------------------------------------
@@ -170,6 +171,15 @@
 ;; JSX.
 ;;----------------------------------------------------------------------------
 (require 'init-jsx)
+
+;;----------------------------------------------------------------------------
+;; Add by wh
+;; load-theme.
+;;----------------------------------------------------------------------------
+;;(load-theme 'manoj-dark t)
+(load-theme 'solarized-dark t)
+;;(set-frame-parameter nil 'background-mode 'dark)    ;;选择solarized dark
+;;(enable-theme 'solarized)
 
 (provide 'init)
 
