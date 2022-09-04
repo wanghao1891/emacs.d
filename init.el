@@ -176,7 +176,7 @@
 ;; Add by wh
 ;; load-theme.
 ;;----------------------------------------------------------------------------
-(load-theme 'solarized-dark t)
+;;(load-theme 'solarized-dark t)
 
 (provide 'init)
 
