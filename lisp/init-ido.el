@@ -6,8 +6,10 @@
 (setq ido-use-virtual-buffers t)
 
 ;; use ido-ubiquitous
-;;(require-package 'ido-completing-read+)
-;;(ido-ubiquitous-mode t)
+;; https://github.com/DarwinAwardWinner/ido-completing-read-plus
+;; copy https://github.com/DarwinAwardWinner/ido-completing-read-plus/blob/main/ido-completing-read%2B.el to ~/.emacs.d/lisp/ido-completing-read+.el
+(require 'ido-completing-read+)
+(ido-ubiquitous-mode t)
 
 ;; use smex to handle M-x
 ;; https://github.com/nonsequitur/smex

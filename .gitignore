@@ -39,3 +39,4 @@ site-lisp/package/
 /ditaa*.jar
 recentf
 ido.last
+smex-items
